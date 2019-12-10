@@ -47,11 +47,11 @@
     </div>
   </div>
   <div class="container">
-    <p class="font-italic">By Nicolas Caceres</p>
+    <p class="font-italic">By Nicolás Cáceres</p>
   </div>
   <div class="container">
     <h2 class="font-weight-bold">What</h2>
-    <p>Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 35. Entre estos atributos se tienen 13 categóricos y 22 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
+    <p>Para obtener los datos apropiados para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 3. Entre estos atributos se tienen 2 categóricos y 1 ordenado, cuantitativo, y secuencial. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y la visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
 
     <table class="table">
       <thead>
@@ -79,17 +79,78 @@
         </tr>
       </table>
     </div>
+    <div class="container">
+        <h2 class="font-weight-bold">Why</h2>
+        <h5> Tareas Primarias: </h5>
+        <ol>
+            <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de
+                precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en
+                terminos de la nota obtenida y retiros.</li>
+        </ol>
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+            <li>Identificar (Query->Identify) outliers (All Data -> Outliers) en los porcentajes de los retiros y
+                porcentaje de estudiantes que repobraron el curso de APO I a lo largo de los semestres, según la nota de
+                precalculo o calculo que obtuvieron los estudiantes.</li>
+            <li>Comparar (Query->Compare) las distribuciones (Attributes->One->Distribution) de las notas de precalculo
+                y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos
+                de la nota obtenida y retiros.</li>
+        </ol>
+    </div>
+    <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+            <h4>Modismo 1.1:</h4>
+            <h6>Marcas</h6>
+            <ul>
+              <li>
+                <p>Lineas para representar las barras.</p>
+              </li>
+            </ul>
+            <h6>Canales</h6>
+            <ul>
+              <li>
+                <p>Escala express para representar porcentaje de estudiantes dentro de una categoría.
+                (Eje X)</p>
+              </li>
+              <li>
+                <p>Escala separate & align para representar si se esta haciendo
+                referencia a porcentaje de inscritos, retiros, terminaron el curso, aprobaron o reprobaron el curso de
+                APO I (Eje Y)</p>
+              </li>
+            </ul>
+            <h6>Encode</h6>
+            <ul>
+              <li>
+                <p>Color hue: sirve para diferenciar entre inscritos, retiron, terminaron el curso, aprobaron y reprobaron
+                el curso de APO I. </p>
+              </li>
+            </ul>
+            <h6>Manipulate</h6>
+            <ul>
+              <li>
+                <p>En cuanto al manipulate hay un Select sobre cada barra para obtener la información detallada.</p>
+              </li>
+            </ul>
+            <h6>Reduce</h6>
+            <ul>
+              <li>
+                <p>En cuanto al reduce hay un filter según un semestre en particular.</p>
+              </li>
+            </ul>
+        </p>
+      </div>
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class='tableauPlaceholder' id='viz1575865626993' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WT&#47;WTJHYCT26&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;WTJHYCT26' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WT&#47;WTJHYCT26&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575865626993');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1400px';vizElement.style.height='927px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
       </div>
     </div>
     <div class="container">
-      <p class="font-italic">By Nicolas Caceres</p>
+      <p class="font-italic">By Nicolás Cáceres</p>
     </div>
     <div class="container">
       <h2 class="font-weight-bold">What</h2>
-      <p>Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 35. Entre estos atributos se tienen 13 categóricos y 22 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
+      <p>Para obtener los datos apropiados para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 7. Entre estos atributos se tienen 3 categóricos, 3 ordenados, cuantitativos, y secuenciales y 1 ordenado ordinal. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y la visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
 
       <table class="table">
         <thead>
@@ -137,17 +198,91 @@
           </tr>
         </table>
       </div>
+      <div class="container">
+        <h2 class="font-weight-bold">Why</h2>
+        <h5> Tareas Primarias: </h5>
+        <ol>
+            <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de
+                precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en
+                terminos de la nota obtenida y retiros.</li>
+        </ol>
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+            <li>Identificar (Query->Identify) outliers (All Data -> Outliers) en los porcentajes de los retiros y
+                porcentaje de estudiantes que repobraron el curso de APO I a lo largo de los semestres, según la nota de
+                precalculo o calculo que obtuvieron los estudiantes.</li>
+            <li>Comparar (Query->Compare) las distribuciones (Attributes->One->Distribution) de las notas de precalculo
+                y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos
+                de la nota obtenida y retiros.</li>
+        </ol>
+    </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+            <h4>Modismo 1.2:</h4>
+            <p>Nota: Por categoría calculo precalculo hacemos referencia al último registro de la nota obtenida por un
+                estudiante en precalculo o calculo, al momento de ver el curso de APO I.</p>
+            <h6>Marcas</h6>
+            <ul>
+              <li>
+                <p>Líneas para representar las barras y líneas de referencia.</p>
+              </li>
+            </ul>
+            <h6>Canales</h6>
+            <ul>
+              <li>
+                 <p>Escala express para representar porcentaje de estudiantes dentro de una categoria de precalculo-calculo.
+                (Eje X)</p>
+              </li>
+              <li>
+                <p>Escala separate & align para representar si se esta haciendo
+                referencia a porcentaje de inscritos, retiros, terminaron el curso, aprobaron o reprobaron el curso de
+                APO I (Eje Y)</p>
+              </li>
+            </ul>
+            <h6>Encode</h6>
+            <ul>
+              <li>
+                <p>Color hue: sirve para diferenciar entre inscritos, retiron, terminaron el curso, aprobaron y reprobaron
+                el curso de APO I. </p>
+              </li>
+            </ul>
+            <h6>Manipulate</h6>
+            <ul>
+              <li>
+                <p>En cuanto al manipulate hay un Select sobre cada barra para obtener la información detallada.</p>
+              </li>
+            </ul>
+            <h6>Facet</h6>
+            <ul>
+              <li>
+                <p>
+                  Existe un Juxtapose, ya que en la visualización se utilizan small multiples que usan el mismo encode y los mismos datos.
+                </p>
+              </li>
+            </ul>
+            <h6>Reduce</h6>
+            <ul>
+              <li>
+                <p>En cuanto al reduce hay un filter según algun semestre en particular.</p>
+              </li>
+              <li>
+                <p>Además hay un filter según una categoría de Cálculo Pre-Cálculo.</p>
+              </li>
+            </ul>
+        </p>
+      </div>
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class='tableauPlaceholder' id='viz1575870420205' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Bigotes_Retiros&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Bigotes_Retiros&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Bigotes_Retiros&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575870420205');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1100px';vizElement.style.height='927px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
         </div>
       </div>
       <div class="container">
-        <p class="font-italic">By Nicolas Caceres</p>
+        <p class="font-italic">By Nicolás Cáceres</p>
       </div>
       <div class="container">
         <h2 class="font-weight-bold">What</h2>
-        <p>Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 35. Entre estos atributos se tienen 13 categóricos y 22 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
+        <p>Para obtener los datos apropiados para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 6. Entre estos atributos se tienen 3 categóricos, 2 ordenados, cuantitativos, y secuenciales y 1 ordenado ordinal. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y la visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
 
         <table class="table">
           <thead>
@@ -190,17 +325,75 @@
             </tr>
           </table>
         </div>
+        <div class="container">
+        <h2 class="font-weight-bold">Why</h2>
+        <h5> Tareas Primarias: </h5>
+        <ol>
+            <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de
+                precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en
+                terminos de la nota obtenida y retiros.</li>
+        </ol>
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+            <li>Identificar (Query->Identify) outliers (All Data -> Outliers) en los porcentajes de los retiros y
+                porcentaje de estudiantes que repobraron el curso de APO I a lo largo de los semestres, según la nota de
+                precalculo o calculo que obtuvieron los estudiantes.</li>
+            <li>Comparar (Query->Compare) las distribuciones (Attributes->One->Distribution) de las notas de precalculo
+                y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos
+                de la nota obtenida y retiros.</li>
+        </ol>
+    </div>
+        <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+            <h4>Modismo 1.3:</h4>
+            <h6>Marcas</h6>
+            <ul>
+              <li>
+                <p>Líneas para representar cuartiles y medianas</p>
+              </li>
+              <li>
+                <p>Puntos para representar los semestres</p>
+              </li>
+            </ul>
+            <h6>Canales</h6>
+            <ul>
+              <li>
+                <p>Escala express para representar el porcentaje de retiros por categoría de calculo-precalculo, es decir
+                del 100% de los estudiantes que aprobaron precálculo, que porcentaje retiro. (Eje Y)</p>
+              </li>
+              <li>
+                <p>Escala separate & align para representar las categorías de cálculo-precálculo. (Eje X)</p>
+              </li>
+            </ul>
+            <h6>Encode</h6>
+            <ul>
+              <li>
+                <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no.</p>
+              </li>
+            </ul>
+            <h6>Manipulate</h6>
+            <ul>
+              <li>
+                <p>En cuanto al manipulate hay un Select sobre cada caja para obtener la información detallada.</p>
+              </li>
+              <li>
+                <p>Además hay un Select sobre cada punto para obtener la información detallada.</p>
+              </li>
+            </ul>
+        </p>
+        </div>
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class='tableauPlaceholder' id='viz1575870441039' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Bigotes_Reprobados&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Bigotes_Reprobados&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Bigotes_Reprobados&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1575870441039');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1100px';vizElement.style.height='927px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
           </div>
         </div>
         <div class="container">
-          <p class="font-italic">By Nicolas Caceres</p>
+          <p class="font-italic">By Nicolás Cáceres</p>
         </div>
         <div class="container">
           <h2 class="font-weight-bold">What</h2>
-          <p>Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 35. Entre estos atributos se tienen 13 categóricos y 22 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
+          <p>Para obtener los datos apropiados para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 6. Entre estos atributos se tienen 2 categóricos, 3 ordenados, cuantitativos, y secuenciales y 1 ordenado ordinal. Lo anterior dado que estas columnas son las únicas que contienen información váliosa para las tareas y la visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por  items y atributos.</p>
 
           <table class="table">
             <thead>
@@ -243,5 +436,64 @@
               </tr>
             </table>
           </div>
+          <div class="container">
+        <h2 class="font-weight-bold">Why</h2>
+        <h5> Tareas Primarias: </h5>
+        <ol>
+            <li>Resumir (Query-> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de
+                precalculo y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en
+                terminos de la nota obtenida y retiros.</li>
+        </ol>
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+            <li>Identificar (Query->Identify) outliers (All Data -> Outliers) en los porcentajes de los retiros y
+                porcentaje de estudiantes que repobraron el curso de APO I a lo largo de los semestres, según la nota de
+                precalculo o calculo que obtuvieron los estudiantes.</li>
+            <li>Comparar (Query->Compare) las distribuciones (Attributes->One->Distribution) de las notas de precalculo
+                y calculo de los estudiantes en relación con el desempeño en la materia de APOI, desempeño en terminos
+                de la nota obtenida y retiros.</li>
+        </ol>
+    </div>
+          <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+          <p>
+            <h4>Modismo 1.4:</h4>
+            <h6>Marcas</h6>
+            <ul>
+              <li>
+                <p>Líneas para representar cuartiles y medianas</p>
+              </li>
+              <li>
+                <p>Puntos para representar los semestres</p>
+              </li>
+            </ul>
+            <h6>Canales</h6>
+            <ul>
+              <li>
+                <p>Escala express para representar el porcentaje de estudiantes que perdieron APO I por categoría de cálculo
+                precálculo, es decir del 100% de los estudiantes que aprobaron precálculo, que porcentaje reprobó APO I.
+                (Eje Y)</p>
+              </li>
+              <li>
+                <p>Escala separate & align para representar las categorías de cálculo-precálculo. (Eje X)</p>
+              </li>
+            </ul>
+            <h6>Encode</h6>
+            <ul>
+              <li>
+                <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no.</p>
+              </li>
+            </ul>
+            <h6>Manipulate</h6>
+            <ul>
+              <li>
+                <p>En cuanto al manipulate hay un Select sobre cada caja para obtener la información detallada.</p>
+              </li>
+              <li>
+                <p>Además hay un Select sobre cada punto para obtener la información detallada.</p>
+              </li>
+            </ul>
+        </p>
+    </div>
         </body>
         </html>
