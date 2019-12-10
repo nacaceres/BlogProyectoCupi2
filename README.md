@@ -16,4 +16,4 @@ Encontrar insights acerca del desempeño en la asignatura de APO I.
 [Juan Camilo Sanguino Pérez](https://github.com/jcsanguino10) 
 [Valentina Chacón Buitrago](https://github.com/ValentinaChaconBuitrago) 
 # Licencia
-Este proyecto está bajo MIT public license. Se pueden econtrar [aqui](https://github.com/nacaceres/barranquilla_comparendos/blob/master/LICENSE).
+Este proyecto está bajo MIT public license. Se pueden econtrar [aqui](https://github.com/nacaceres/BlogProyectoCupi2/blob/master/LICENSE).
