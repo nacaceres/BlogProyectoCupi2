@@ -5,6 +5,9 @@
   <title>Blog Cupi2</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
   <!-- Load color palettes -->
@@ -24,8 +27,18 @@
         <li class="nav-item active">
           <a class="nav-link" href="./iteracion2.html">Iteración 2</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Producto Final
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="../productofinal/calculo/calculo.html">Pre-Cálculo</a>
+            <a class="dropdown-item" href="../productofinal/espanol/espanol.html">Español</a>
+            <a class="dropdown-item" href="../productofinal/saber/saber.html">Pruebas Saber</a>
+          </div>
+        </li>
         <li class="nav-item">
-          <a class="nav-link" href="../productofinal/productofinal.html">Producto Final</a>
+          <a class="nav-link" href="../autores/autores.html">Autores</a>
         </li>
       </ul>
     </div>
@@ -180,16 +193,19 @@
         <p class="font-italic">Modismo 2</p>
       </div>
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div id="viz_juan"></div>
-          <script src="scriptVzJuan.js"></script>
-          <div class="form-group ml-3">
-            <label for="selectButton">Filtro por retiro</label>
-            <select class="form-control" id="selectButton">
-              <option value="1">No filtrar</option>
-              <option value="2">Estudiantes retirados</option>
-              <option value="3">Estudiantes sin retirar</option>
-            </select>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class=" row justify-content-center">
+            <div id="viz_juan"></div>
+            <script src="scriptVzJuan.js"></script>
+            <div class="form-group ml-3">
+              <label for="selectButton">Filtro por retiro</label>
+              <select class="form-control" id="selectButton">
+                <option value="1">No filtrar</option>
+                <option value="2">Estudiantes retirados</option>
+                <option value="3">Estudiantes sin retirar</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -201,22 +217,24 @@
         <p class="font-italic">Modismo 3.1</p>
       </div>
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div id="my_dataviz2"></div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class=" row justify-content-center">
+            <div id="my_dataviz2"></div>
           <script src="scriptVZVale1.js"></script>
+          </div>
         </div>
       </div>
-      <div class="container">
-        <p class="font-italic">By Valentina Chacón Buitrago</p>
-      </div>
-
       <div class="container">
         <p class="font-italic">Modismo 3.2</p>
       </div>
       <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div id="my_dataviz"></div>
-          <script src="scriptMod2-2.js"></script>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class=" row justify-content-center">
+            <div id="my_dataviz"></div>
+            <script src="scriptMod2-2.js"></script>
+          </div>
         </div>
       </div>
       <div class="container">
