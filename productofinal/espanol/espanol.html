@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Blog Cupi2</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="https://d3js.org/d3.v5.js"></script>
+
+  <script src="https://www.lactame.com/lib/ml/3.3.0/ml.min.js"></script>
+  <!-- Load color palettes -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="../../index.html">Blog Cupi2</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -24,7 +40,8 @@
           <a class="nav-link" href="../../iteracion2/iteracion2.html">Iteración 2</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             Producto Final
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -39,6 +56,250 @@
       </ul>
     </div>
   </nav>
-  <div>Español</div>
+  <div class="container mt-5 pt-4">
+    <div class="row">
+      <div class="container-fluid col-12">
+        <h2>Insights</h2>
+        <h4>Aunque existe una correlación entre la nota de español y la nota de APO, esta no determina del todo el exito
+          del estudiante en la materia</h4>
+        <h6>Al observar los datos se puede observar una gran correlación entre las notas de español y APO. Sin embargo,
+          al momento de filtrar los estudiantes que retiraron la materia, el gran porcentaje de estos tiene una nota
+          aceptable (superior a 3.5)</h6>
+        <br>
+        <h4>La cantidad de estudiantes que tomaron el curso de español simultaneamente con APO o antes de esta tuvo una
+          gran caida desde el semestre 201520</h4>
+        <br>
+        <div class="alert alert-info" role="alert">
+          En la siguiente visualización cuando la nota de APO esta en 0 indica que el estudiante retiro la
+          materia
+        </div>
+        <div class="row">
+          <div class="form-group ml-3 col-5">
+            <label for="selectButton">Filtro por retiro</label>
+            <select class="form-control" id="selectButton">
+              <option value="1">No filtrar</option>
+              <option value="2">Estudiantes retirados</option>
+              <option value="3">Estudiantes sin retirar</option>
+            </select>
+          </div>
+          <div class="form-group ml-3 col-5">
+            <label for="selectButton2">Filtro por semestre</label>
+            <select class="form-control" id="selectButton2">
+              <option value="1">No filtrar</option>
+              <option value="201510">201510</option>
+              <option value="201520">201520</option>
+              <option value="201610">201610</option>
+              <option value="201620">201620</option>
+              <option value="201710">201710</option>
+              <option value="201720">201720</option>
+              <option value="201810">201810</option>
+              <option value="201820">201820</option>
+              <option value="201910">201910</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <h5 class="col-6">Modimos 1</h5>
+          <h5 class="col-6">Modimos 2</h5>
+        </div>
+        <div class="row">
+          <div id="viz_juan"></div>
+          <div id="viz_juan2"></div>
+          <script src="scriptVzJuan.js"></script>
+        </div>
+        <h5 class="col-6">Modimos 3</h5>
+        <div class='tableauPlaceholder' id='viz1575925173911' style='position: relative'><noscript><a href='#'><img
+                alt=' '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Es&#47;Estudiantesespaol&#47;Dashboard1&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='Estudiantesespaol&#47;Dashboard1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Es&#47;Estudiantesespaol&#47;Dashboard1&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' /></object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1575925173911'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '800px'; vizElement.style.height = '427px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '800px'; vizElement.style.height = '427px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <p class="font-italic">Por Juan Camilo Sanguino</p>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">What</h2>
+        <p>Para obtener los datos apropiados para la visualización, el archivo CSV original tuvo que modificarse.
+          Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 3. Entre estos atributos se
+          tienen 2 categóricos y 1 ordenado, cuantitativo, y secuencial. Lo anterior dado que estas columnas son las
+          únicas que contienen información váliosa para las tareas y la visualización. En más detalle se cuenta con un
+          dataset de tipo tabla con información estática clasificada por items y atributos.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Atributo</th>
+              <th scope="col">Interpretación</th>
+              <th scope="col">Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Semestre</td>
+              <td>Semestre en el que el estudiante esta cursando el curso de APO</td>
+              <td>Atributo ordenado > cuantitativo > secuencial</td>
+            </tr>
+            <tr>
+              <td>definitiva_banner</td>
+              <td>Nota obtenida por un estudiante en la materia de APO con aproximaciones.</td>
+              <td>Atributo ordenado, cuantitativo, secuencial</td>
+            </tr>
+            <tr>
+              <td>retiro_banner</td>
+              <td>Valor que identifica si el estudiante retiro o no la materia.</td>
+              <td>Atributo categórico.</td>
+            </tr>
+            <tr>
+              <td>leng1501</td>
+              <td>Nota obtenida por un estudiante en español</td>
+              <td>Atributo ordenado, cuantitativo, secuencial</td>
+            </tr>
+            <tr>
+              <td>lite1611</td>
+              <td>Nota obtenida por un estudiante en español, este curso fue el sustituto del curso Leng1501</td>
+              <td>Atributo ordenado, cuantitativo, secuencial</td>
+            </tr>
+        </table>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">Why</h2>
+        <h5> Tareas Primarias: </h5>
+        <ol>
+          <li>Uno de los objetivos principales de la visualización es identificar ( Query -> Identify) las
+            correlaciones (Attributes
+            -> Many -> Correlation) entre las notas de español y las obtenidas en la clase de APO.(Modismo 2)</li>
+        </ol>
+        <h5> Tareas Secundarias: </h5>
+        <ol>
+          <li>Comparar (Query->Compare) la cantidad de estudiantes (Attributes->Many) que comparten una misma nota de
+            apo y una nota similar en español </li>
+          <li>Comparar (Query->Compare) la cantidad de estudiantes (Attributes->Many) que comparten una misma nota de
+            apo y una nota similar en español para los estudiantes que no retiraron la materia</li>
+          <li>Comparar (Query->Compare) la cantidad de estudiantes (Attributes->Many) que comparten una misma nota de
+            apo y una nota similar en español para los estudiantes que retiraron la materia </li>
+          <li>Comparar (Query->Compare) la cantidad de estudiantes (Attributes->Many) que comparten una misma nota de
+            apo y una nota similar en español según un semestre en particular</li>
+        </ol>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h4>Modismo 1:</h4>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Punto.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express para representar la nota de los estudiantes de APO.
+                (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala separate & align para representar si se esta haciendo
+                referencia a porcentaje de inscritos, retiros, terminaron el curso, aprobaron o reprobaron el curso de
+                APO I (Eje Y)</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Color iluminación. Sirven para identificar la cantidad de estudiantes que comparten un comportamiento en las Notas de APO y español </p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>En cuanto al manipulate hay un Select sobre cada celda donde permite observar la cantidad de estudiantes que comparten dicho comportamiento</p>
+            </li>
+          </ul>
+          <h6>Reduce</h6>
+          <ul>
+            <li>
+              <p>En cuanto al reduce hay un filter según un semestre en particular y según si se retiro o no la materia.</p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          <h4>Modismo 2:</h4>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Puntos.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express para representar la nota de los estudiantes de APO.
+                (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala express para representar la nota de los estudiantes de Español.
+                (Eje X)</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Color iluminación. Sirven para identificar el tamaño del grupo de estudiantes que comparten el mismo comportamiento en sus notas de Español y APO</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>En cuanto al manipulate hay un Select sobre cada celda donde permite observar la cantidad de estudiantes que comparten dicho comportamiento</p>
+            </li>
+          </ul>
+          <h6>Reduce</h6>
+          <ul>
+            <li>
+              <p>En cuanto al reduce hay un filter según un semestre en particular y según si se retiro o no la materia.</p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          <h4>Modismo 3:</h4>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Linea</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express para representar la cantidad de estudiantes que estan cursando o cursaron la materia de español
+                (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala express para representar el semestre de los estudiantes
+                (Eje X)</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>En cuanto al manipulate hay un Select sobre cada barra donde permite observar la cantidad de estudiantes que vieron la materia en dicho semestre</p>
+            </li>
+          </ul>
+        </p>
+      </div>
+
 </body>
+
 </html>
