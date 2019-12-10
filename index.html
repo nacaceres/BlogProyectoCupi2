@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Blog Cupi2</title>
   <link rel="stylesheet" type="text/css" href="./style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="./index.html">Blog Cupi2</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -24,7 +34,8 @@
           <a class="nav-link" href="./iteracion2/iteracion2.html">Iteración 2</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             Producto Final
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -39,6 +50,270 @@
       </ul>
     </div>
   </nav>
-  <div>Home</div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Conceptualización</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./proceso.html">Proceso de elaboración de visualizaciones</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <div class="container">
+    <h1>Problema</h1>
+    <p>
+      Dado que más de mil estudiantes toman el curso de APO I (Algorítmica y Programación Orientada Por Objetos I)
+      semestralmente, nuestro cliente quiere establecer cuales son las principales razones por las que un estudiante que
+      toma el curso decide retirarlo o lo pierde. Lo anterior con el fin de poder tomar medidas preventivas hacia estos
+      estudiantes y hacer que su paso por el nuevo primer curso de programación IP (Introducción a la programación) sea
+      lo más exitoso posible.
+    </p>
+    <h1> Datos </h1>
+    <p>
+      Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se
+      contaba con 11313 filas y 44 columnas de las cuales se seleccionaron solo 35. Entre estos atributos se tienen 13
+      categóricos y 22 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que
+      contienen información valiosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo
+      tabla con información estática clasificada por ítems y atributos.
+    </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Atributo</th>
+          <th scope="col">Interpretación</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td>Id del registro tomado por el equipo cupi2.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>semestre</td>
+          <td>Semestre en el cual se tomó el registro.</td>
+          <td>Atributo ordenado, cuantitativo secuencial.</td>
+        </tr>
+        <tr>
+          <td>curso</td>
+          <td>Identificador del curso en código uniandes. Ej: ISIS 1204.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>código</td>
+          <td>Código del estudiante anonimizado.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>colegio</td>
+          <td>Nombre del colegio del estudiante.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>colegio_codigo</td>
+          <td>Código icfes del colegio.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>saber_v1</td>
+          <td>Puntaje acumulado del icfes del estudiante, en el formato 1</td>
+          <td>Atributo ordenado, cuantitativo secuencial.</td>
+        </tr>
+      </tbody>
+      <tr>
+        <td>saber_v2</td>
+        <td>Puntaje acumulado del icfes del estudiante, en el formato 2</td>
+        <td>Atributo ordenado, cuantitativo secuencial.</td>
+      </tr>
+      <tr>
+        <td>mate1203</td>
+        <td>Nota obtenida en la asignatura cálculo diferencial.</td>
+        <td>Atributo ordenado, cuantitativo secuencial.</td>
+      </tr>
+      <tr>
+        <td>leng1501</td>
+        <td>Nota obtenida en la asignatura español version leng1501.</td>
+        <td>Atributo ordenado, cuantitativo secuencial.</td>
+      </tr>
+      <tr>
+        <td>lite1611</td>
+        <td>Nota obtenida en la asignatura español version lite1611.</td>
+        <td>Atributo ordenado, cuantitativo secuencial.</td>
+      </tr>
+      <tr>
+        <td>huma1300</td>
+        <td>Nota obtenida en la asignatura español version huma1300.</td>
+        <td>Atributo ordenado, cuantitativo secuencial.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>creditos_inscritos</td>
+        <td>Créditos inscritos por el alumno en ese semestre.</td>
+        <td>Atributo ordenado, cuantitativo secuencial.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>semestre_segun_creditos</td>
+        <td>Semestre el cual está cursando un estudiante según el número de créditos vistos.</td>
+        <td>Atributo categórico.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>spp</td>
+        <td>Valor que identifica si un estudiante es beneficiario o no del programa Ser Pilo Paga.</td>
+        <td>Atributo categórico.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>generacion_e</td>
+        <td>Valor que identifica si un estudiante es beneficiario o no del programa Generación - E.</td>
+        <td>Atributo categórico.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>curso_nombre</td>
+        <td>Nombre de la materia que está cursando el estudiante.</td>
+        <td>Atributo categórico.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>veces_visto</td>
+        <td>Número que identifica el número de veces que un estudiante ha visto la materia.</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>definitiva_profesor</td>
+        <td>Nota obtenida por un estudiante en la materia de APO sin aproximaciones.</td>
+        <td>Atributo ordenado, cuantitativo, secuencial</td>
+      </tr>
+      <tr>
+        <td>retiro_banner</td>
+        <td>Valor que identifica si el estudiante retiro o no la materia.</td>
+        <td>Atributo categórico.</td>
+      </tr>
+      <tr>
+        <td>pga</td>
+        <td>Promedio acumulado del estudiante.</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>riesgo_deca</td>
+        <td>Valor que indica si el estudiante se encuentra en riesgo de acuerdo a los criterios de la decanatura o no
+        </td>
+        <td>Atributo categórico.</td>
+      </tr>
+      <tr>
+        <td>tipo_riesgo_deca</td>
+        <td>Una de las 5 categorías {2SPG, PGSS, PRAC, PRIM y PRRE} de riesgo en las que se puede clasificar un
+          estudiante.</td>
+        <td>Atributo categórico.</td>
+      </tr>
+      <tr>
+        <td>spadies</td>
+        <td>Puntaje entre 1 y 4 SPADIES identificando el nivel de riesgo que presenta un estudiante.</td>
+        <td>Atributo categórico. </td>
+      </tr>
+      <tr>
+        <td>saber_biologia</td>
+        <td>Puntaje obtenido en el área de biología en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_ciencias</td>
+        <td>Puntaje obtenido en el área de ciencias en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_filosofia</td>
+        <td>Puntaje obtenido en el área de filosofía en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_fisica</td>
+        <td>Puntaje obtenido en el área de física en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_lenguajes</td>
+        <td>Puntaje obtenido en el área de lenguajes en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_quimica</td>
+        <td>Puntaje obtenido en el área de química en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_matematicas</td>
+        <td>Puntaje obtenido en el área de matemáticas en el saber 11-1 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_v2_cienciasnaturales</td>
+        <td>Puntaje obtenido en el área de ciencias naturales en el saber 11-2 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_v2_ingles</td>
+        <td>Puntaje obtenido en el área de inglés en el saber 11-2 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_v2_lecturacritica</td>
+        <td>Puntaje obtenido en el área de lectura crítica en el saber 11-2 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+      <tr>
+        <td>saber_v2_socialesciudad</td>
+        <td>Puntaje obtenido en el área de Sociales-ciudad en el saber 11-2 (va de 0 a 100).</td>
+        <td>Atributo ordenado, cuantitativo, secuencial.</td>
+      </tr>
+    </table>
+
+    <h1>Limpieza de datos</h1>
+    <p>
+      La limpieza de los datos se realizó a través de la herramienta de excel de tablas, la cual permite filtrar por
+      valores y darse cuenta de inconsistencias. En primer lugar dado que el alcance del proyecto era el curso de APO I,
+      eliminamos todas las filas que correspondían al curso APOII, APOII honores e introducción a la programación. En
+      segundo lugar existían algunos datos con inconsistencias en los retiros, dado que las columnas retiro y retiro
+      banner indican que un estudiante no había retirado, pero la nota banner era 0, lo cual implicaba que el estudiante
+      podía encontrarse en una situación de pendiente, luego se eliminaron estos registros y no se tuvieron en cuenta.
+      En tercer lugar, la columna retiro y la columna retiro_banner no eran coherentes, es decir que en algunas
+      ocasiones una columna indicaba un retiro mientras que la otra no, es por esto que en retiro_banner siempre que la
+      columna retiro indicaba un retiro hicimos que retiro_banner también lo indicara. Por último, eliminamos todas las
+      columnas que no utilizamos para las diferentes visualizaciones, donde el listado de las columnas finales se
+      adjunta a continuación.
+    </p>
+    <ul>
+      <li>id</li>
+      <li>semestre</li>
+      <li>curso</li>
+      <li>saber_v1</li>
+      <li>saber_v2</li>
+      <li>Leng1501</li>
+      <li>lite1611</li>
+      <li>huma1300</li>
+      <li>curso nombre</li>
+      <li>definitiva profesor</li>
+      <li>saber biologia</li>
+      <li>saber ciencias</li>
+      <li>saber filosofia</li>
+      <li>saber fisica</li>
+      <li>saber lenguajes</li>
+      <li>saber quimica</li>
+      <li>saber matematicas</li>
+      <li>saber v2 ciencias naturales</li>
+      <li>saber v2 ingles</li>
+      <li>saber v2 lectura critica</li>
+      <li>saber v2 sociales ciudad</li>
+      <li>precalculo</li>
+    </ul>
+  </div>
 </body>
+
 </html>

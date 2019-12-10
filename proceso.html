@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Cupi2</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html">Blog Cupi2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./iteracion1/iteracion1.html">Iteración 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./iteracion2/iteracion2.html">Iteración 2</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Producto Final
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="./productofinal/calculo/calculo.html">Pre-Cálculo</a>
+                        <a class="dropdown-item" href="./productofinal/espanol/espanol.html">Español</a>
+                        <a class="dropdown-item" href="./productofinal/saber/saber.html">Pruebas Saber</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./autores/autores.html">Autores</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Conceptualización</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./proceso.html">Proceso de elaboración de visualizaciones</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Iteraciones sobre el proyecto</h1>
+        <h2>Selección cliente</h2>
+        <p>El día 25 de septiembre se realizó la selección del proyecto a través de Slack. El proyecto que el grupo
+            seleccionó pertenece al equipo cupi2 de la Universidad de los Andes que trabaja en temas relacionados con
+            las
+            clases de algorítmica y programación en niveles introductorios. Nosotros siendo estudiantes y habiendo visto
+            esta
+            clase tuvimos gran interés en poder contribuir con este proyecto. Más específicamente, el cliente quería
+            evaluar
+            cómo factores externos al curso de Algorítmica y programación orientada a objetos, en adelante APO, influyen
+            en el
+            éxito del estudiante en la materia y de acuerdo a esto aplicar esos conocimientos y tomar medidas para
+            ayudar a
+            los estudiantes en el nuevo curso de introducción a la programación, en adelante IP, que se está
+            desarrollando.
+        </p>
+        <h2>Primera reunión cliente</h2>
+        <p>Con el fin de identificar el problema que el cliente quería solucionar y conocer sus expectativas, tuvimos
+            una
+            primera reunión en la que la líder del proyecto cupi2 habló con nuestro equipo. Esta reunión se llevó a cabo
+            el
+            día jueves 3 de Octubre a través de Skype.
+            En principio el cliente tenía ciertas hipótesis sobre los resultados de los estudiantes en APO y las
+            posibles
+            consecuencias a esto. Entre las hipótesis presentadas se encuentran:
+        </p>
+        <div class="container mx-4">
+            <h3>Con relación a los cursos de precálculo y cálculo:</h3>
+            <ul>
+                <li>
+                    <p>Los estudiantes que han reprobado pre-cálculo antes de tomar el curso de programación tienen una
+                        alta
+                        probabilidad de perder el curso de programación.</p>
+                </li>
+                <li>
+                    <p>Los estudiantes que han aprobado cálculo antes de tomar el curso de programación tienen una
+                        probabilidad
+                        más
+                        alta de aprobar el curso de programación que los que no han aprobado cálculo.</p>
+                </li>
+                <li>
+                    <p>
+                        Hay una relación directa entre la nota obtenida por un estudiante en el curso de cálculo y su
+                        desempeño en
+                        el
+                        curso de programación (a mayor nota en cálculo, mayor nota en programación y viceversa).
+                    </p>
+                </li>
+            </ul>
+            <h3>Con relación al curso de español: </h3>
+            <ul>
+                <li>
+                    <p>Los estudiantes que han reprobado español o han obtenido una nota baja en dicho curso antes de
+                        tomar el
+                        curso
+                        de programación tienen una alta probabilidad de perder el curso de programación.</p>
+                </li>
+                <li>
+                    <p>Los estudiantes que han aprobado español antes de tomar el curso de programación tienen una
+                        probabilidad
+                        más
+                        alta de aprobar el curso de programación que los que no han aprobado español.</p>
+                </li>
+            </ul>
+            <h3>Con relación a la prueba Saber 11:</h3>
+            <ul>
+                <li>
+                    <p>Hay una relación directa entre la nota obtenida por el estudiante en la prueba Saber 11 y el
+                        desempeño en
+                        el
+                        curso de programación (a mayor nota en el Saber 11, mayor nota en programación y viceversa).</p>
+                </li>
+                <li>
+                    <p>Hay una relación directa entre la nota obtenida por el estudiante en la prueba de MATEMÁTICAS del
+                        Saber 11
+                        y
+                        el desempeño en el curso de programación (a mayor nota en MATEMÁTICAS del Saber 11, mayor nota
+                        en
+                        programación
+                        y viceversa).</p>
+                </li>
+            </ul>
+            <p>Además nos hizo entrega de un archivo excel con los datos. Posteriormente, revisamos el archivo y pudimos
+                realizar preguntas sobre los atributos y su significado. A partir de las hipótesis se identificaron las
+                áreas
+                sobre las cuales la cliente quería enfocar el proyecto dado que las visualizaciones permiten identificar
+                más
+                insights que solo los datos estadísticos que se obtienen de excel.
+                En vista de que los datos que nos fueron entregados contienen información sensible sobre los
+                estudiantes, fuimos
+                llamados a firmar un acuerdo de confidencialidad en el cual se nos pidió usar esta información sólo para
+                fines
+                académicos, salvaguardando la identidad de los estudiantes y no permitir el acceso a los datos por parte
+                de
+                terceros.
+            </p>
+        </div>
+        <h2>Primera propuesta del proyecto</h2>
+        <p>Para el 10 de Octubre se hizo la propuesta inicial del proyecto, la cual está disponible en siguiente <a
+                href="./iteracion1/iteracion1.html">enlace</a>.
+            De acuerdo a la primera reunión con el cliente y las hipótesis planteadas se identificaron tres áreas de
+            trabajo.
+            La identificación de insights a partir de las áreas descritas anteriormente se puede describir en tres
+            tareas
+            principales:
+        </p>
+        <ol>
+            <li>
+                <p>Resumir (Query -> Summarize) las distribuciones (Attributes->One->Distribution) de las notas de
+                    precálculo de
+                    los estudiantes con su desempeño en la materia de APOI, desempeño en término de la nota obtenida y
+                    retiros.
+                </p>
+            </li>
+            <li>
+                <p>Identificar ( Query -> Identify) las correlaciones (Attributes -> Many -> Correlation) entre las
+                    notas de
+                    español y las obtenidas en la clase de APO.</p>
+            </li>
+            <li>
+                <p>Identificar ( Query -> Identify) las correlaciones (Attributes -> Many -> Correlation) entre el
+                    puntaje del
+                    icfes (en el criterio de lectura crítica) y las notas obtenidas en la clase de APO.</p>
+            </li>
+        </ol>
+        <p>A partir de estas tareas se realizaron 4 modismos: dos modismos para la primera tarea y un modismo para la
+            tarea
+            dos y tres respectivamente.
+            Todas las visualizaciones se realizaron bajo el framework de Tamara por lo que cada una cumple una tarea y
+            describe información sobre el what?, why? y how?.</p>
+        <h2>Primer reporte de progreso</h2>
+        <p>El primer reporte de progreso se presentó el martes 22 de Octubre. El informe contiene la contextualización
+            sobre
+            la materia APO y algunas estadísticas históricas de la materia, la descripción de las hipótesis planteadas
+            por el
+            cliente, la caracterización de los datos, que bajo el framework de Tamara se describe como el “what?”, y la
+            definición de tareas secundarias que se construyeron a partir de las tareas principales descritas en la
+            primera
+            iteración del proyecto.
+            Ampliando la descripción del “what?” se encuentra la explicación sobre lo que significan los atributos
+            seleccionados, la clasificación de los atributos donde se tuvo dos tipos: categóricos y ordenados,
+            cuantitativos,
+            secuenciales. Además, dadas las características de los datos y la forma como fueron entregados se tiene un
+            dataset
+            de tipo tabla.
+            Para esta entrega se realizó una presentación en Google slides y un documento con la información detallada
+            de la
+            entrega disponible en el siguiente <a
+                href="https://docs.google.com/document/d/1fN5RhS5A_EDbaKMClMRUaL6KGjM5b-KzC0h41gBDzUM/edit?usp=sharing">enlace</a>
+            . </p>
+        <h2>Pruebas de usabilidad</h2>
+        <p>Las pruebas de usabilidad se llevaron a cabo el lunes 11 de Noviembre. Para esto se realizaron tres
+            entrevistas
+            con personas involucradas en el proyecto cupi2 y se realizó un reporte que se encuentra disponible en el
+            siguiente
+            <a href="https://docs.google.com/document/d/13gDIeCA3V4cAQufKwqSA1gnZN4UXz1Jfw-bFbRng9_s/edit?usp=sharing">enlace
+            </a>
+
+            Para cada entrevista se hicieron una serie de preguntas cuantitativas y cualitativas. En primer lugar se
+            definió
+            el perfil del participante, se aclaró la forma en la que el equipo usaría la información recolectada y se
+            pidió
+            consentimiento para poder grabar la entrevista. A continuación, se realizaron una serie de preguntas y se
+            pidió al
+            participante interactuar con la aplicación. Paralelamente, se solicitó al participante compartir sus
+            pensamientos
+            y opiniones sobre la herramienta en voz alta.
+            Por último, una vez terminada la interacción con las visualizaciones se realizó una encuesta Likert con el
+            fin de
+            obtener datos cuantitativos sobre la usabilidad de la herramienta y saber que tan de acuerdo o en desacuerdo
+            estaba el participante sobre las afirmaciones presentadas. De esto se obtuvo retroalimentación valiosa para
+            iterar
+            sobre el producto.
+            Cabe aclarar que una de las pruebas se realizó directamente con el cliente por lo que pudimos conocer la
+            efectividad de las visualizaciones para cumplir con las tareas planteadas. De esto se discutieron posibles
+            mejoras
+            con el fin de facilitar la usabilidad y definir nuevos modismos que incluyeran información valiosa y la
+            transmitieran de forma más clara que lo que estaba siendo presentado.
+
+            A partir de la retroalimentación de los participantes se encontraron puntos de mejora en el proyecto. Para
+            las
+            visualizaciones que dan cumplimiento a la primera tarea se identificaron estos problemas:
+        </p>
+        <ol>
+            <li>
+                <p>No se puede identificar fácilmente qué puntos representan que semestres.</p>
+            </li>
+            <li>
+                <p>Es muy difícil entender el modismo para los usuarios sin que el entrevistador interviniera para
+                    explicar la
+                    visualización.</p>
+            </li>
+            <li>
+                <p>Falta incluir las notas de APO en la visualización, es decir aplicar un diagrama de caja y bigotes de
+                    la
+                    misma forma en el eje X pero en el eje Y poner las notas de APO I, ya que con las notas y los
+                    retiros es mas
+                    fácil concluir acerca de la hipótesis si precalculo debía ser un prerrequisito de APO I.</p>
+            </li>
+        </ol>
+        <p>de los anteriores problemas se plantearon las siguientes soluciones:</p>
+        <ol>
+            <li>
+                <p>Agregar un canal de color a los puntos para que se puedan identificar por semestre.</p>
+            </li>
+            <li>
+                <p>Encontrar una forma de entrenar al usuario sin tener que intervenir yo directamente, es decir
+                    realizar una
+                    clase de tutorial que explique desde que es un diagrama de caja y bigotes, hasta explicar
+                    detalladamente que
+                    representan los ejes.</p>
+            </li>
+            <li>
+                <p>Realizar una nueva visualización cambiando el eje Y por las promedio de las notas de APO I, ya que
+                    meter las
+                    notas en el mismo diagrama puede violar el principio de expresividad.</p>
+            </li>
+        </ol>
+        <p>De la misma manera para la visualización que da cumplimiento a la segunda tarea se identificaron estos
+            problemas:
+        </p>
+        <ol>
+            <li>
+                <p>La visualización no permite extraer información extra sobre los datos. Es decir, información sobre la
+                    cantidad de estudiantes que tienen comportamientos iguales o similares en sus notas.</p>
+            </li>
+            <li>
+                <p>Identificar que tipo de datos estoy teniendo en cuenta a la hora de realizar la visualización (cuando
+                    el
+                    estudiante retiro la materia o no la está viendo ese semestre).</p>
+            </li>
+            <li>
+                <p>No hay un componente visual que ayude al usuario a validar que si existe esa correlación en las notas
+                    de APO
+                    y español. Debido a que hay dispersión muy alta de los datos en algunos rangos.</p>
+            </li>
+        </ol>
+        <p>y de acuerdo a esto se determinaron las siguientes soluciones:</p>
+        <ol>
+            <li>
+                <p>Se tiene pensado realizar un cambio en el modismo a un heatmap, debido a que con el canal del color
+                    se puede
+                    brindar al usuario una estimación sobre la cantidad de estudiantes que tienen un comportamiento
+                    igual o
+                    similar en sus notas de APO y Español a través de las celdas del heatmap. De esta manera, se puedan
+                    analizar
+                    los datos en conjunto (una celda del Heatmap) y no por unidad (los puntos utilizados en la
+                    visualización), la
+                    cual no aporta información relevante al usuario.</p>
+            </li>
+            <li>
+                <p>Poner un filtro en la visualización sobre los estudiantes que no están cursando la materia o la
+                    retiraron.
+                </p>
+            </li>
+            <li>
+                <p>Se tenía pensado realizar una regresión lineal sobre los datos en la visualización por puntos, pero
+                    debido al
+                    cambio de modismo, no tiene sentido la regresión lineal. Por otro lado, el agrupar por
+                    comportamiento
+                    (realizar pequeños clusters) ayuda a disminuir la dispersión que se observa en el modismo actual.
+                    Sin embargo,
+                    este hallazgo se evaluará de nuevo una vez realizado el nuevo modismo.</p>
+            </li>
+        </ol>
+        <p>Por último, para la visualización que da cumplimiento a la tercera tarea se identificaron estos problemas:
+        </p>
+        <ol>
+
+            <li>
+                <p>Los rangos no son claros para evidenciar cómo se dividen los grupos. No se entiende la división que
+                    se hizo
+                    de los puntajes que se hicieron de lectura crítica.</p>
+            </li>
+            <li>
+                <p>El propósito del color no se entiende. Mientras que los 3 participantes denotaron el color como un
+                    indicador
+                    de la nota promedio de APO en un rango de lectura crítica, el verdadero propósito era mostrar
+                    densidad en los
+                    grupos. Es decir, entre más oscuro el tono de azul, mayor es la cantidad de estudiantes que
+                    pertenecen a ese
+                    rango.</p>
+            </li>
+            <li>
+                <p>No hay una forma de saber cuántas personas pertenecen a un mismo grupo/rango de puntajes de lectura
+                    crítica
+                    en el icfes.</p>
+            </li>
+        </ol>
+        <p>No hay una forma de saber cuántas personas pertenecen a un mismo grupo/rango de puntajes de lectura crítica
+            en el
+            icfes.</p>
+        <ol>
+            <li>
+                <p>De acuerdo a la retroalimentación de los tres participantes, se considera la opción de replantear el
+                    modismo.
+                    El color no fue interpretado de la manera correcta y los rangos no fueron la manera más efectiva
+                    para agrupar
+                    los puntajes de lectura crítica. A partir de esto se plantea como solución el uso de un heatmap
+                    donde el eje x
+                    sea el puntaje en lectura crítica y el eje y se la nota final en APO.
+                </p>
+            </li>
+            <li>
+                <p>Cada casilla corresponderá a un hue de azul donde el color más fuerte represente una mayor cantidad
+                    de
+                    estudiantes en esa categoría. </p>
+            </li>
+            <li>
+                <p>Se utilizará la interactividad del mapa para mostrar información más precisa cómo la cantidad de
+                    estudiantes
+                    en esa categoría, la nota de APO y la puntuación de español en el icfes. </p>
+            </li>
+
+        </ol>
+        <h2>Segundo reporte de progreso</h2>
+        <p>A partir de la retroalimentación obtenida en las pruebas de usabilidad y las soluciones planteadas a los
+            problemas encontrados se corrigieron las visualizaciones. Estas se encuentran en el siguiente <a
+                href="./iteracion2/iteracion2.html"> link</a>
+            De ahí se tiene que se incluyeron nuevos datos para cumplir con las tareas y se cambiaron los modismos
+            correspondientes a la segunda y tercer tarea. Se implementaron heatmaps para las tareas dos y tres. Para la
+            segunda tarea se incluyó información de retiros lo que permite filtrar la información. Respecto a la tercera
+            tarea, se incluyó otro modismo, ahora el icfes incluye no solo los resultados en lectura crítica sino que
+            también
+            muestra los resultados de matemáticas.
+        </p>
+    </div>
+</body>
+
+</html>
