@@ -8,6 +8,8 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -39,6 +41,435 @@
       </ul>
     </div>
   </nav>
-  <div>Saber!</div>
-</body>
-</html>
+  <div class="container"><h1>Visualización lectura crítica</h1></div>
+  <div class="container">
+    <h2 class="font-weight-bold">What</h2>
+    <p>Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 4. Entre estos atributos se tienen 2 categóricos y 2 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que contienen información valiosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por ítems y atributos.</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Atributo</th>
+          <th scope="col">Interpretación</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>semestre</td>
+          <td>Semestre en el cual se tomó el registro.</td>
+          <td>Atributo ordenado, cuantitativo secuencial.</td>
+        </tr>
+        <tr>
+          <td>curso</td>
+          <td>Identificador del curso en código uniandes. Ej: ISIS 1204.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>retiro_banner</td>
+          <td>Valor que identifica si el estudiante retiro o no la materia.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>saber_v2_lecturacritica</td>
+          <td>Puntaje obtenido en el área de lectura crítica en el saber 11-2 (va de 0 a 100)</td>
+          <td>Atributo ordenado, cuantitativo, secuencial.</td>
+        </tr>
+      </table>
+    </div>
+    <div class="container">
+      <h2 class="font-weight-bold">Why</h2>
+      <h5> Tareas Primarias: </h5>
+      <ol>
+        <li>Identificar ( Query ->Identify) las correlaciones (Attributes -> Many -> Correlation) entre el puntaje del icfes, en el criterio de lectura crítica, y las notas obtenidas en la clase de APO. </li>
+      </ol>
+      <h5> Tareas Secundarias: </h5>
+      <ol>
+        <li>Comparar (Query->Compare) las distribuciones (Attributes->One->Distribution) de las notas finales de APO con relación al puntaje obtenido en el criterio de lectura crítica de la prueba saber.
+        </li>
+        <li>Identificar (Query -> Identify)  cómo los resultados en la nota final de APO se ven afectados (Attributes->All Data->Trends) por el puntaje obtenido en el criterio de lectura crítica del icfes.</li>
+      </ol>
+    </div>
+    <div class="container">
+      <h1>Hay un número reducido de personas que ven APO y obtienen altas puntuaciones en el criterio de lectura crítica en el icfes</h1>
+    </div>
+    <div class="container">
+      <h5>La visualización presentada a continuación representa el número total de estudiantes que han sacado cierto puntaje en lectura crítica y obtienen determinada nota definitiva en APO. A partir de esto se evidencia que en su mayoría los estudiantes que ven APO obtienen puntuaciones en el icfes que se encuentran entre los 63 y 77 puntos</h5>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class=" row justify-content-center">
+            <div id="my_dataviz2"></div>
+            <script src="scriptVZVale1.js"></script>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <p class="font-italic">By Valentina Chacón Buitrago</p>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">Insights</h2>
+        <ul>
+          <li>
+            <h5>Los puntajes en lectura crítica no son determinantes para definir el éxito de un estudiante en la materia de APO dado que la mayoría de estudiantes obtienen puntajes intermedios que se encuentran entre el rango de los 63 y 77 puntos.</h5>
+          </li>
+          <li>
+            <h5>Personas con puntajes en lectura crítica entre 67 y 75 puntos son más propensas a ver APO.</h5>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Puntos: Representa el total de estudiantes que obtuvieron una determinada nota de APO y del criterio de evaluación del icfes. Aún cuando se tienen rectángulos que ocupan un área, esta área no representa ningún valor por lo que la marca es un punto.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Color saturation: El número total de estudiantes que obtuvieron cierta nota en APO y en el criterio de evaluación en el icfes varía de acuerdo a una saturación (dependiendo del criterio puede ser azul o verde). Entre más intenso es el color, mayor es la cantidad de estudiantes en ese punto.</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Arrange -> Express: Usado para la nota de APO y el resultado en el criterio del icfes.</p>
+            </li>
+            <li>
+              <p>Map -> Color -> Saturation: Denota el número de estudiantes que obtuvieron la misma nota en APO y en el criterio de evaluación del icfes.</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>Se tiene una visualización interactiva donde por medio de un select se puede obtener información específica correspondiente al recuadro seleccionado. En mayor detalle, la información presentada incluye la cantidad total de estudiantes que pertenecen al grupo con la nota de APO y criterio del icfes seleccionado.</p>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="container">
+      <h1>Independientemente  de los resultados obtenidos en lectura crítica de la prueba saber el estudiante puede ser o no ser exitoso en APO</h1>
+    </div>
+    <div class="container">
+      <h5>La visualización presentada a continuación muestra la distribución de las notas finales obtenidas en APO para los estudiantes que obtuvieron un mismo puntaje en lectura crítica en las pruebas saber. De acuerdo a esto, se identifican distribuciones a partir del puntaje 51 en lectura crítica donde se encuentran estudiantes en el extremo inferior ubicado en 2.5 lo que indica que perdieron la materia y otros en el extremo superior ubicado en 5.0</h5>
+    </div>
+    <div class="container">
+          <div class='tableauPlaceholder' id='viz1576006709409' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;visualizaciones_adicionales_nuevas_esp&#47;Hoja2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='visualizaciones_adicionales_nuevas_esp&#47;Hoja2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;visualizaciones_adicionales_nuevas_esp&#47;Hoja2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1576006709409');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+    <div class="container">
+        <p class="font-italic">By Valentina Chacón Buitrago</p>
+    </div>
+    <div class="container">
+        <h2 class="font-weight-bold">Insights</h2>
+        <ul>
+          <li>
+            <h5>Según la distribución en las calificaciones de APO se evidencia que aún cuando una persona obtiene un puntaje bajo de 51 en lectura crítica puede sacar 5.00 en la materia o perderla. El comportamiento anterior ocurre también con puntajes superiores a éste.  La media de cada grupo es igual o superior a 3.00 qué es la calificación a partir de la cual un estudiante se considera exitoso. </h5>
+          </li>
+          <li>
+            <h5>Las personas que obtienen un puntaje superior a 83 en lectura crítica pasan APO, existen algunas excepciones pero dado que el número de personas en esa categoría es mínima no se considera una muestra significativa.  Una excepción ocurre con el puntaje 94 donde se presenta un outlier que indica en el extremo inferior de la distribución que un estudiante pierde la materia. Aún cuando lo anterior ocurre no es una muestra significativa pues solo hay cinco estudiantes con ese puntaje y de estos solo perdió la materia uno de ellos.</h5>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Líneas: para representar cuartiles y medianas</p>
+            </li>
+            <li>
+              <p>Puntos: para representar la nota final obtenida en APO.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express: para representar la calificación final obtenida en APO por puntuación en el criterio de lectura crítica, es decir del 100% de los estudiantes que obtuvieron cierto puntaje en lectura crítica, que nota final en APO obtuvieron. (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala separate & align: para representar los puntajes de lectura crítica. (Eje X)</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no.</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>Se tiene una visualización interactiva que cuenta con un select lo que permite que al seleccionar cada caja se pueda obtener la información detallada. Además, hay un Select sobre cada punto para obtener la información detallada.</p>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="container"><h1>Visualización Matemáticas</h1></div>
+      <div class="container">
+    <h2 class="font-weight-bold">What</h2>
+    <p>Para obtener datos óptimos para la visualización, el archivo CSV original tuvo que modificarse. Originalmente se contaba con 44 columnas de las cuales se seleccionaron solo 4. Entre estos atributos se tienen 2 categóricos y 2 ordenados, cuantitativos, y secuenciales. Lo anterior dado que estas columnas son las únicas que contienen información valiosa para las tareas y visualización. En más detalle se cuenta con un dataset de tipo tabla con información estática clasificada por ítems y atributos.</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Atributo</th>
+          <th scope="col">Interpretación</th>
+          <th scope="col">Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>semestre</td>
+          <td>Semestre en el cual se tomó el registro.</td>
+          <td>Atributo ordenado, cuantitativo secuencial.</td>
+        </tr>
+        <tr>
+          <td>curso</td>
+          <td>Identificador del curso en código uniandes. Ej: ISIS 1204.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>retiro_banner</td>
+          <td>Valor que identifica si el estudiante retiro o no la materia.</td>
+          <td>Atributo categórico.</td>
+        </tr>
+        <tr>
+          <td>saber_matematicas</td>
+          <td>Puntaje obtenido en el área de matemáticas en el saber 11-(1,2) (va de 0 a 100). </td>
+          <td>Atributo ordenado, cuantitativo, secuencial.</td>
+        </tr>
+      </table>
+    </div>
+    <div class="container">
+      <h2 class="font-weight-bold">Why</h2>
+      <h5> Tareas Primarias: </h5>
+      <ol>
+        <li>Identificar ( Query ->Identify) la correlación (Attributes -> Many -> Correlation) entre el puntaje del icfes, en el criterio de matemáticas, y las notas obtenidas en la clase de APO. </li>
+      </ol>
+      <h5> Tareas Secundarias: </h5>
+      <ol>
+        <li>Comparar (Query->Compare) las distribuciones (Attributes->One->Distribution) de las notas finales de APO con relación al puntaje obtenido en el criterio de matemáticas de la prueba saber.
+        </li>
+        <li>Identificar (Query -> Identify)  cómo los resultados en la nota final de APO se ven afectados (Attributes->All Data->Trends) por el puntaje obtenido en el criterio de matemáticas del icfes.</li>
+      </ol>
+    </div>
+    <div class="container">
+      <h1>Son pocos los estudiantes que obtienen puntajes inferiores a 58 en matemáticas del icfes e  inscriben o finalizan la materia de APO</h1>
+    </div>
+    <div class="container">
+      <h5>La visualización presentada a continuación representa el número total de estudiantes que han sacado cierto puntaje en matemáticas y obtienen determinada nota definitiva en APO. A partir de esto se evidencia que en su mayoría los estudiantes que ven APO obtienen puntuaciones en matemáticas del icfes que superan los 60 puntos</h5>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class=" row justify-content-center">
+            <div id="my_dataviz"></div>
+            <script src="scriptMod2-2.js"></script>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+        <p class="font-italic">By Valentina Chacón Buitrago</p>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">Insights</h2>
+        <ul>
+          <li>
+            <h5>Los estudiantes que obtienen puntajes superiores a 60 en el criterio de matemáticas de la prueba saber escogen ver APO y la terminan.</h5>
+          </li>
+          <li>
+            <h5>Entre los estudiantes de APO, hay un grupo significativo que sacó 100 en matemáticas del icfes. Este grupo de personas se distingue por obtener notas que sobrepasan 4.00, en su mayoría,  por lo que existe una correlación entre la obtención de buenos resultados de matemáticas y la finalización exitosa de la materia.</h5>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Puntos: Representa el total de estudiantes que obtuvieron una determinada nota de APO y del criterio de evaluación del icfes. Aún cuando se tienen rectángulos que ocupan un área, esta área no representa ningún valor por lo que la marca es un punto.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Color saturation: El número total de estudiantes que obtuvieron cierta nota en APO y en el criterio de evaluación en el icfes varía de acuerdo a una saturación (dependiendo del criterio puede ser azul o verde). Entre más intenso es el color, mayor es la cantidad de estudiantes en ese punto.</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Arrange -> Express: Usado para la nota de APO y el resultado en el criterio del icfes</p>
+            </li>
+            <li>
+              <p>Map -> Color -> Saturation: Denota el número de estudiantes que obtuvieron la misma nota en APO y en el criterio de evaluación del icfes.</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>Se tiene una visualización interactiva donde por medio de un select se puede obtener información específica correspondiente al recuadro seleccionado. En mayor detalle, la información presentada incluye la cantidad total de estudiantes que pertenecen al grupo con la nota de APO y criterio del icfes seleccionado.</p>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="container">
+      <h1> Como mínimo el 50% de los estudiantes en todos los grupos de  puntajes de matemática en el icfes pasan APO. </h1>
+    </div>
+    <div class="container">
+      <h5>La visualización presentada a continuación muestra la distribución de las notas finales obtenidas en APO para los estudiantes que obtuvieron un mismo puntaje en matemáticas en las pruebas saber. De acuerdo a esto, se identifican distribuciones a partir de los puntajes de matemáticas donde se encuentra que la media de todos los grupos es superior a 3.00</h5>
+    </div>
+    <div class="container">
+        <div class='tableauPlaceholder' id='viz1576006756562' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PN&#47;PNG6F5T9F&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;PNG6F5T9F' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PN&#47;PNG6F5T9F&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1576006756562');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </div>
+      <div class="container">
+        <p class="font-italic">By Valentina Chacón Buitrago</p>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">Insights</h2>
+        <ul>
+          <li>
+            <h5>Con la información de todos los semestres la media de la nota final en APO de todos los grupos es igual o mayor a 3.00. Aún cuando los estudiantes con mejores resultados en el icfes obtienen también buenos resultados en APO, existen estudiantes que tuvieron un desempeño inferior en matemáticas pero pueden sacar buenas calificaciones en APO.</h5>
+          </li>
+          <li>
+            <h5>El semestre en el que se tuvo el punto de corte superior fue el 201810, donde el puntaje mínimo obtenido por un estudiante de APO en el criterio de matemática fue de 62. No obstante en este semestre se encuentra que el extremo inferior de las distribuciones en todos los puntajes del icfes se encuentra en notas de APO inferiores a 3.00, contrario a lo que ocurre en el semestre 201510 donde el punto de corte fue inferior, 57 puntos, pero solo 4 grupos cuentan con un extremo inferior menor a 3.00. De esto se tiene que un punto de corte superior en un semestre de estudiantes no implica que los resultados en APO sean mejores que aquellos grupos semestrales donde el punto de corte es menor. </h5>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Líneas: para representar cuartiles y medianas</p>
+            </li>
+            <li>
+              <p>Puntos: para representar la nota final obtenida en APO.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express: para representar la calificación final obtenida en APO por puntuación en el criterio de matemáticas, es decir del 100% de los estudiantes que obtuvieron cierto puntaje en matemáticas, que nota final en APO obtuvieron. (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala separate & align: para representar los puntajes de matemáticas. (Eje X)</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no.</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>Se tiene una visualización interactiva que cuenta con un select lo que permite que al seleccionar cada caja se pueda obtener la información detallada. Además, hay un Select sobre cada punto para obtener la información detallada.</p>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="container">
+      <h1> Para sacar 5.00 en APO un estudiante tiene que obtener más de 65 puntos en el criterio de matemáticas de la prueba saber </h1>
+    </div>
+    <div class="container">
+      <h5>La visualización presentada a continuación representa el número total de estudiantes y su distribución de acuerdo al puntaje en matemáticas y la nota definitiva en APO. En los modismos se agrupan los puntajes del icfes.  De acuerdo a la información presentada, para que un estudiante pueda tener posibilidades de sacar 5 en la materia tiene que haber sacado un puntaje mayor a 65 en la prueba saber de matemáticas</h5>
+    </div>
+    <!---->
+    <div class="container">
+      <div class='tableauPlaceholder' id='viz1576006495417' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;visualizaciones_adicionales_dashboard_final&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='visualizaciones_adicionales_dashboard_final&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;vi&#47;visualizaciones_adicionales_dashboard_final&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1576006495417');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+    <!---->
+      <div class="container">
+        <p class="font-italic">By Valentina Chacón Buitrago</p>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">Insights</h2>
+        <ul>
+          <li>
+            <h5>Como mínimo un estudiante tiene que obtener 65 puntos en matemáticas del icfes para tener probabilidad de sacar 5.00 en APO. Ningún estudiante con puntaje menor a 65 logró sacar 5.00 en la materia de acuerdo a la información de todos los semestres. </h5>
+          </li>
+          <li>
+            <h5>Los estudiantes que obtienen puntuaciones inferiores a 60 en el icfes se distribuyen en un rango más amplio de calificaciones, lo que muestra un aumento en la probabilidad de fallo en la materia. El 25% de los estudiantes con este puntaje obtiene notas entre 2.00 y 3.00. Mientras que con puntajes superiores entre los 70 y 90 puntos el 25% de las personas obtienen notas entre 2.50 y 3.50.  </h5>
+          </li>
+          <li>
+            <h5>El 50% de los estudiantes que sacan puntajes superiores a 70 en el criterio de matemáticas obtienen calificaciones mayores o iguales a 4.00.  </h5>
+          </li>
+          <li>
+            <h5>La distribución en las calificaciones de APO obtenidas por estudiantes que tienen puntajes entre 70 y 90 es igual por lo que no existe ninguna diferencia en desempeño en APO entre obtener puntajes entre ese rango. </h5>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h4>Modismo 1 (Boxplot):</h4>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Líneas: para representar cuartiles y medianas</p>
+            </li>
+            <li>
+              <p>Puntos: para representar la nota final obtenida en APO.</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express: para representar la calificación final obtenida en APO por puntuación en el criterio de matemáticas, es decir del 100% de los estudiantes que obtuvieron cierto puntaje en matemáticas, que nota final en APO obtuvieron. (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala separate & align: para representar las agrupaciones de puntajes de matemáticas. (Eje X)</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Color hue: sirve para diferenciar entre los que están debajo de la media y los que no.</p>
+            </li>
+          </ul>
+          <h6>Manipulate</h6>
+          <ul>
+            <li>
+              <p>Se tiene una visualización interactiva que cuenta con un select lo que permite que al seleccionar cada caja se pueda obtener la información detallada. Además, hay un Select sobre cada punto para obtener la información detallada.</p>
+            </li>
+          </ul>
+        </p>
+      </div>
+      <div class="container">
+        <h2 class="font-weight-bold">How</h2>
+        <p>
+          <h4>Modismo 2 (Scatterplot):</h4>
+          <h6>Marcas</h6>
+          <ul>
+            <li>
+              <p>Puntos: Representa la nota de un estudiante en APO y en matemáticas del icfes</p>
+            </li>
+          </ul>
+          <h6>Canales</h6>
+          <ul>
+            <li>
+              <p>Escala express: para representar la calificación final obtenida en APO por puntuación en el criterio de matemáticas. (Eje Y)</p>
+            </li>
+            <li>
+              <p>Escala separate & align: se ubican los puntos según la nota en matemáticas (Eje X)</p>
+            </li>
+          </ul>
+          <h6>Encode</h6>
+          <ul>
+            <li>
+              <p>Color Saturation: Determinar la cantidad de estudiantes con comportamientos en las notas similares, entre más estudiantes se encuentran con una calificación igual en APO y en matemáticas más fuerte es la saturación del color.  </p>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </body>
+    </html>
