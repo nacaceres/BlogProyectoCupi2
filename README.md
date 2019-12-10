@@ -13,7 +13,7 @@ Encontrar insights acerca del desempeño en la asignatura de APO I.
 ![Screenshot Pag Web](https://raw.githubusercontent.com/nacaceres/CriticaVisualizacion/master/APOVIZ.png)
 # Autores
 [Nicolás Cáceres Acosta](https://github.com/nacaceres)   
-[Juan Camilo Sanguino Pérez](https://github.com/jcsanguino10) 
+[Juan Camilo Sanguino Pérez](https://github.com/jcsanguino10)  
 [Valentina Chacón Buitrago](https://github.com/ValentinaChaconBuitrago) 
 # Licencia
 Este proyecto está bajo MIT public license. Se pueden econtrar [aqui](https://github.com/nacaceres/BlogProyectoCupi2/blob/master/LICENSE).
